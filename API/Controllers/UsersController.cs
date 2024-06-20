@@ -1,5 +1,3 @@
-using System.Security.Claims;
-using API.Data;
 using API.DTOs;
 using API.Entities;
 using API.Extensios;
@@ -25,7 +23,7 @@ public class UsersController : BaseApiController
             _mapper = mapper;
     }
 
-    [AllowAnonymous]
+
     [HttpGet]
     public async Task<ActionResult<PagedList<MemberDto>>> GetUsers([FromQuery]UserParams userParams)
     {
